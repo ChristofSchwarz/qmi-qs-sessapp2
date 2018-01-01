@@ -1,0 +1,45 @@
+{
+    "name": "qmi-qs-sessapp2",
+    "description": "Qlik Sense with Extended Session App (OEM)",
+    "category": "Qlik Sense",
+    "plugin-dependencies": [],
+    "notes": "Loads energy data from PostgreSQL database into session apps, authenticates users against a MongoDB\nRequires Qlik Sense >= September 2017.",
+    "version": 1.0,
+    "author": "Christof Schwarz",
+    "email": "csw@qlik.com",
+    "disabled": false,
+    "custom": true,
+    "resources": [{
+            "name": "QMC",
+            "url": "http://qmi-qs-sessapp2/qmc"
+        },
+        {
+            "name": "Hub",
+            "url": "http://qmi-qs-sessapp2/hub"
+        },
+        {
+            "name": "User name / password",
+            "value": ".\\qlik / Qlik1234"
+        },
+        {
+            "name": "Demo",
+            "url": "http://qmi-qs-sessapp2:4000"
+        }
+    ],
+    "config": {
+        "allowUpdates": true,
+        "servers": [{
+            "name": "qmi-qs-sessapp2",
+            "ip": "192.168.75.102",
+            "box": "qlik/win2k16",
+            "memory": 4096,
+            "cpus": 2,
+            "sense": {
+                "central": true,
+                "proxy": true,
+                "engine": true,
+                "persistence": "shared"
+            }
+        }]
+    }
+}

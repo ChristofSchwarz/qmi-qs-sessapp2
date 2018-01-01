@@ -1,0 +1,1 @@
+"c:\Program Files\HeidiSQL\heidisql.exe" -d Local-MSSQL -n 3 -h .\SQLEXPRESS -u sa -p Qlik1234
